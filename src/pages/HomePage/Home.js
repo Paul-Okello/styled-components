@@ -4,7 +4,7 @@ import { homeObjOne } from "./Data";
 const Home = () => {
   return (
     <>
-      <InfoSection {...}/>
+      <InfoSection {...homeObjOne} />
     </>
   );
 };
