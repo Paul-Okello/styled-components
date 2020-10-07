@@ -55,12 +55,14 @@ export const NavMenu = styled.ul`
   text-align: center;
 
   @media screen and (max-width: 960px) {
+    display: flex;
+    align-items: center;
     flex-direction: column;
     width: 100%;
     height: 90vh;
     position: absolute;
     top: 80px;
-    left: ${({ click }) => (click ? 0 : "-100")};
+    left: ${({ click }) => (click ? 0 : "-100%")};
     opacity: 1;
     transition: all 0.5s ease;
     background: #101522;
@@ -87,10 +89,16 @@ export const NavLinks = styled(Link)`
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
-  display: table;
 
-  &::hover {
-    color: #4b59f7;
-    transition: all 0.3s ease;
+  @media screen and (max-width: 960px) {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+
+    &::hover {
+      color: #4b59f7;
+      transition: all 0.3s ease;
+    }
   }
 `;

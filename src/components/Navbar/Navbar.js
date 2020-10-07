@@ -7,6 +7,9 @@ import {
   NavbarContainer,
   NavIcon,
   NavLogo,
+  NavMenu,
+  NavItem,
+  NavLinks,
 } from "./Navbar.elements";
 
 const Navbar = () => {
@@ -25,9 +28,15 @@ const Navbar = () => {
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
-            <NavMenu conClick={handleClick}>
+            <NavMenu onClick={handleClick} click={click}>
               <NavItem>
                 <NavLinks to="/">Home</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/services">Services</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/products">Products</NavLinks>
               </NavItem>
             </NavMenu>
           </NavbarContainer>
